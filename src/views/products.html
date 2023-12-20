@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./products.css"/>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <a class="navbar-brand" href="#">Inventory App</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Product</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Body -->
+    <div class="container">
+        <!-- Table -->
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bhagavad Gita: Yatharoop</td>
+                    <td>A holy books of hindus</td>
+                    <td scope="col">494</td>
+                    <td><img src="https://cdn.exoticindia.com/images/products/original/books-2017/nan284.jpg" alt="Product 1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Atomic Habbits</td>
+                    <td>A supremely practical and useful book.</td>
+                    <td scope="col">551</td>
+                    <td><img src="https://shorturl.at/qzNV0" alt="Product 2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>The Psychology of Money</td>
+                    <td>The mindset and behaviors that influence financial decisions.</td>
+                    <td scope="col">303</td>
+                    <td><img src="https://images.blinkist.io/images/books/60140e9d6cee070007f4833a/1_1/470.jpg" alt="Product 2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
