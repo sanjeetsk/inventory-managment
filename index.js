@@ -20,8 +20,14 @@ const productController = new ProductController();
 
 server.get('/', productController.getProducts);
 server.get('/new', productController.getAddProduct);
-server.post('/', validateRequest ,productController.addNewProduct)
+server.get('/update-product/:id', productController.getUpdateProductView);
+server.post('/delete-product/:id', productController.deleteProduct);
+server.post('/', validateRequest ,productController.postaddProduct);
+server.post('/update-product', productController.postUpdateProduct);
 
 server.use(express.static('./src/views'))
+server.use(express.static('public'));
 
-server.listen(3000);
+server.listen(3000,()=>{
+    console.log("Server is running on port 3000");
+});
