@@ -1,5 +1,5 @@
-export default class ProductModel{
-    constructor(_id, _name, _desc, _price, _imageUrl){
+export default class ProductModel {
+    constructor(_id, _name, _desc, _price, _imageUrl) {
         this.id = _id
         this.name = _name
         this.desc = _desc
@@ -7,8 +7,19 @@ export default class ProductModel{
         this.imageUrl = _imageUrl
     }
 
-    static get() {
+    static getAll() {
         return products;
+    }
+
+    static add(productObj) {
+        let newProduct = new ProductModel(
+            products.length + 1, 
+            productObj.name, 
+            productObj.desc,
+            productObj.price, 
+            productObj.imageUrl
+        )
+        products.push(newProduct);
     }
 }
 
