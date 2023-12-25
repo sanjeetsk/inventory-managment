@@ -29,6 +29,12 @@ const validateRequest = async (req, res, next) => {
         // body('imageUrl')
         //     .isURL()
         //     .withMessage('Invalid url'),
+        body.apply('imageUrl').custom((value, {req}) =>{
+            if(!req.file){
+                throw new Error('Image is required');
+            }
+            return true;
+        })
     ];
 
     //2. run those rules
