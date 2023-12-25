@@ -14,13 +14,14 @@ export default class ProductController{
     }
 
     postaddProduct(req, res, next){
-
-        ProductModel.add(req.body)
+        const { name, desc, price } = req.body;
+        const imageUrl = "images/" + req.file.filename;
+        ProductModel.add(name, desc, price, imageUrl);
         let products = ProductModel.getAll();
         return res.render("products", {products: products}); 
     }
 
-    getUpdateProductView(req, res, view){
+    getUpdateProductView(req, res){
         //if product exist then return view
         const id = req.params.id;
         console.log("id", id);
