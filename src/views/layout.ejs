@@ -17,11 +17,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Products</a>
+                    <a class="nav-link active" href="/">Products</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/new">New Product</a>
+                    <a class="nav-link active" href="/new">New Product</a>
                 </li>
+                <% if(locals.userEmail){ %>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="/logout">LogOut</a>
+                    </li>
+                <% }else{ %>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="/login">Login</a>
+                    </li>
+                <% } %>
             </ul>
         </div>
     </nav>
