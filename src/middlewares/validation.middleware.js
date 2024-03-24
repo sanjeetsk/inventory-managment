@@ -46,7 +46,7 @@ const validateRequest = async (req, res, next) => {
     //4. if error, then return the error message
     if(!validationError.isEmpty()){
         return res.render("new-product", {
-            errorMessage: validationError.array()[0],
+            errorMessage: validationError.array()[0].msg,
         });
     }
 

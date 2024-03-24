@@ -37,8 +37,7 @@
                 </td>
                 <td>
                     <a href="/update-product/<%= product.id %>" class="btn btn-warning">Upate</a>
-                    <button class="btn btn-danger" onclick="deleteProduct('<%= product.id %>')">Delete</button>
-
+                    <a href="/delete-product/<%= product.id %>" class="btn btn-danger">Delete</button>
                 </td>
             </tr>
             <% }) %>
